@@ -5,7 +5,7 @@ def main():
     print_square(3)
 
 def print_column(height):
-  # for _ in range (height):
+  # for _ in range(height):
   #     print("#")
   # the below does the same thing, just a different way of doing it as previously seen
   print("#\n" * height, end="")
