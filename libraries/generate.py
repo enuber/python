@@ -1,5 +1,4 @@
 # docs.python.org/3/library/random.html
-# docs.python.org/3/library/statistics.html
 # import allows you to import modules, or libraries into a program
 
 # random is a library that comes with python but has to be brought in
