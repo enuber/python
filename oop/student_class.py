@@ -14,28 +14,28 @@
 # can create your own methods, a function built into it. Always has self coming into it so you have access to the current object
 
 class Student: 
-  def __init__(self, name, house):
+  def __init__(self, name, house, patronus):
     if not name:
       raise ValueError("Missing name")
     if house not in ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"]:
       raise ValueError("Invalid House")
     self.name = name 
     self.house = house
-    # self.patronus = patronus
+    self.patronus = patronus
 
   def __str__(self):
     return f"{self.name} from {self.house}"
   
-  # def charm(self):
-  #   match self.patronus:
-  #     case "Stag":
-  #       return "🦌"
-  #     case "Otter":
-  #       return "🦦"
-  #     case "Jack Russell terrier":
-  #       return "🐶"
-  #     case _:
-  #       return "🪄"
+  def charm(self):
+    match self.patronus:
+      case "Stag":
+        return "🦌"
+      case "Otter":
+        return "🦦"
+      case "Jack Russell terrier":
+        return "🐶"
+      case _:
+        return "🪄"
 
 
 
@@ -44,9 +44,9 @@ class Student:
 def main():
   student = get_student()
   print(student)
-  # print("Expecto Patronum!")
-  # print(student.charm())
-  # print(f"{student.name} from {student.house}")
+  print("Expecto Patronum!")
+  print(student.charm())
+  print(f"{student.name} from {student.house}")
 
 def get_student():
   # appears to be calling a function, but we are calling the class
@@ -62,10 +62,9 @@ def get_student():
   # can use a try / except to create the Student and in the class it may throw the error if something isn't correct.
   name = input("Name? ")
   house = input("House? ")
-  # patronus = input("Patronus? ")
+  patronus = input("Patronus? ")
   # try: 
-  return Student(name, house)
-  # return Student(name, house, patronus)
+  return Student(name, house, patronus)
   # except ValueError:
 
 
