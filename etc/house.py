@@ -28,5 +28,3 @@ for student in students:
 
 for house in sorted(houses):
   print(house)
-
-# global - variable outside of all functions. 
